@@ -9,3 +9,6 @@ Criação do controller para cadastro
 * Validação de dados já cadastrados.
 * Retorno de erro para o client.
 
+### Aula 19 ##
+* teste unitario para controller
+* validação de json retornado
