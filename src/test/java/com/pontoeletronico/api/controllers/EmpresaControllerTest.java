@@ -26,7 +26,7 @@ import com.pontoeletronico.api.services.EmpresaService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@AutoConfigureMockMvc
+@AutoConfigureMockMvc//anotação para utilizar contexto web
 @ActiveProfiles("test")
 public class EmpresaControllerTest {
 
