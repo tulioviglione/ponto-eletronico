@@ -28,6 +28,7 @@ import com.pontoeletronico.api.repositories.LancamentoRepository;
 @ActiveProfiles("test")
 public class LancamentoServiceTest {
 
+	//anotação utilizada qunado ja existe teste implementado
 	@MockBean
 	private LancamentoRepository lancamentoRepository;
 

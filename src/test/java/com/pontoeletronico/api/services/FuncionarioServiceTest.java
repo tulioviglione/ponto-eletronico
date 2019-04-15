@@ -24,6 +24,7 @@ import com.pontoeletronico.api.repositories.FuncionarioRepository;
 @ActiveProfiles("test")
 public class FuncionarioServiceTest {
 
+	//anotação utilizada qunado ja existe teste implementado
 	@MockBean
 	private FuncionarioRepository funcionarioRepository;
 

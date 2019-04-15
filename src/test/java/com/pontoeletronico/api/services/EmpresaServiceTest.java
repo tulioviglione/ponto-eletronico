@@ -24,6 +24,7 @@ import com.pontoeletronico.api.repositories.EmpresaRepository;
 @ActiveProfiles("test")
 public class EmpresaServiceTest {
 
+	//anotação utilizada qunado ja existe teste implementado
 	@MockBean
 	private EmpresaRepository empresaRepository;
 
