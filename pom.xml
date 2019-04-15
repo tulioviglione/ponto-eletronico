@@ -73,6 +73,12 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		
+		<!-- recursos do java 8 no jackson -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jdk8</artifactId>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
