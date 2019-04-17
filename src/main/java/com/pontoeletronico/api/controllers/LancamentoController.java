@@ -233,8 +233,8 @@ public class LancamentoController {
 	private Lancamento converterDtoParaLancamento(LancamentoDto lancamentoDto, BindingResult result) throws ParseException {
 		Lancamento lancamento = new Lancamento();
 
-		if (lancamentoDto.getId().isPresent()) {
-			Optional<Lancamento> lanc = this.lancamentoService.buscarPorId(lancamentoDto.getId().get());
+		if ((lancamentoDto.getId()).isPresent()) {
+			Optional<Lancamento> lanc = this.lancamentoService.buscarPorId((lancamentoDto.getId()).get());
 			if (lanc.isPresent()) {
 				lancamento = lanc.get();
 			} else {
