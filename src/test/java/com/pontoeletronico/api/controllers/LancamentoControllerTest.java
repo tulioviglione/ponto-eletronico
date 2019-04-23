@@ -55,7 +55,7 @@ public class LancamentoControllerTest {
 	private final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	
 	@Test
-	@WithMockUser
+	@WithMockUser//anotação para gerar um usuário e passar pela autenticação
 	public void testCadastrarLancamento() throws Exception {
 		Lancamento lancamento = obterDadosLancamento();
 		BDDMockito.given(this.funcionarioService.buscarPorId(Mockito.anyLong())).willReturn(Optional.of(new Funcionario()));
@@ -74,7 +74,7 @@ public class LancamentoControllerTest {
 	}
 	
 	@Test
-	@WithMockUser
+	@WithMockUser//anotação para gerar um usuário e passar pela autenticação
 	public void testCadastrarLancamentoFuncionarioIdInvalido() throws Exception {
 		BDDMockito.given(this.funcionarioService.buscarPorId(Mockito.anyLong())).willReturn(Optional.empty());
 
@@ -88,7 +88,7 @@ public class LancamentoControllerTest {
 	}
 	
 	@Test
-	@WithMockUser
+	@WithMockUser(username = "admin@admin.com", roles = {"ADMIN"})//anotação para gerar um usuário e passar pela autenticação. Usuário admin
 	public void testRemoverLancamento() throws Exception {
 		BDDMockito.given(this.lancamentoService.buscarPorId(Mockito.anyLong())).willReturn(Optional.of(new Lancamento()));
 
@@ -98,7 +98,7 @@ public class LancamentoControllerTest {
 	}
 	
 	@Test
-	@WithMockUser(username = "admin@admin.com", roles = {"ADMIN"})
+	@WithMockUser//anotação para gerar um usuário e passar pela autenticação
 	public void testRemoverLancamentoAcessoNegado() throws Exception {
 		BDDMockito.given(this.lancamentoService.buscarPorId(Mockito.anyLong())).willReturn(Optional.of(new Lancamento()));
 

@@ -42,7 +42,7 @@ public class EmpresaControllerTest {
 	private static final String RAZAO_SOCIAL = "Empresa XYZ";
 
 	@Test
-	@WithMockUser
+	@WithMockUser//anotação para gerar um usuário e passar pela autenticação
 	public void testBuscarEmpresaCnpjInvalido() throws Exception {
 		BDDMockito.given(this.empresaService.buscarPorCnpj(Mockito.anyString())).willReturn(Optional.empty());
 
@@ -52,7 +52,7 @@ public class EmpresaControllerTest {
 	}
 
 	@Test
-	@WithMockUser
+	@WithMockUser//anotação para gerar um usuário e passar pela autenticação
 	public void testBuscarEmpresaCnpjValido() throws Exception {
 		BDDMockito.given(this.empresaService.buscarPorCnpj(Mockito.anyString()))
 				.willReturn(Optional.of(this.obterDadosEmpresa()));
