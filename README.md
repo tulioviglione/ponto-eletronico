@@ -12,3 +12,6 @@ Criação do controller para cadastro
 ### Aula 19 ##
 * teste unitario para controller
 * validação de json retornado
+
+### Aula 23 ##
+* Autenticação com JWT
