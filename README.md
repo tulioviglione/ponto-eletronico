@@ -15,3 +15,6 @@ Criação do controller para cadastro
 
 ### Aula 23 ##
 * Autenticação com JWT
+
+### Aula 24 ##
+*Documentando API com swagger
