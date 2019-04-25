@@ -18,3 +18,6 @@ Criação do controller para cadastro
 
 ### Aula 24 ##
 *Documentando API com swagger
+
+### Aula 25 ##
+*Utilizando EhCache
