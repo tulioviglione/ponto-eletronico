@@ -27,9 +27,13 @@ import com.pontoeletronico.api.services.EmpresaService;
 import com.pontoeletronico.api.services.FuncionarioService;
 import com.pontoeletronico.api.utils.PasswordUtils;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping("/api/cadastrar-pf")
 @CrossOrigin(origins = "*")
+@Api("Cadastra Pessoa Física no sistema de Ponto Eletrônico")
 public class CadastroPFController {
 
 	private static final Logger log = LoggerFactory.getLogger(CadastroPFController.class);
@@ -52,6 +56,7 @@ public class CadastroPFController {
 	 * @throws NoSuchAlgorithmException
 	 */
 	@PostMapping
+	@ApiOperation(value = "Cria registro", response = CadastroPFDto.class, httpMethod = "POST")
 	public ResponseEntity<Response<CadastroPFDto>> cadastrar(@Valid @RequestBody CadastroPFDto cadastroPFDto,
 			BindingResult result) throws NoSuchAlgorithmException {
 		log.info("Cadastrando PF: {}", cadastroPFDto.toString());
